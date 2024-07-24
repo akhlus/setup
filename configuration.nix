@@ -122,7 +122,6 @@
   wireguard-tools
   gnomeExtensions.dash-to-dock
   gnomeExtensions.caffeine
-  gnomeExtensions.appindicator
   gnomeExtensions.blur-my-shell
   rustup
   ungoogled-chromium
@@ -130,6 +129,7 @@
   usbutils
   toybox
   tio
+  
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
