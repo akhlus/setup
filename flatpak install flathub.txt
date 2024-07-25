@@ -1,0 +1,53 @@
+flatpak install flathub com.discordapp.Discord
+flatpak install flathub com.usebottles.bottles
+flatpak install flathub com.github.tchx84.Flatseal
+flatpak install flathub com.mattjakeman.ExtensionManager
+flatpak install flathub com.obsproject.Studio
+flatpak install flathub org.onlyoffice.desktopeditors
+flatpak install flathub org.mozilla.Thunderbird
+flatpak install flathub com.vscodium.codium
+flatpak install flathub com.github.xournalpp.xournalpp
+flatpak install flathub org.kicad.KiCad
+flatpak install flathub org.chromium.Chromium
+
+sudo dnf install -y htop
+sudo dnf install -y vlc
+sudo dnf install -y gnome-tweaks
+sudo dnf install -y wireguard-tools
+sudo dnf install -y pipx
+sudo dnf install -y
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | 
+
+mkdir rpm && cd rpm
+wget "https://repo.protonvpn.com/fedora-$(cat /etc/fedora-release | cut -d\  -f 3)-stable/protonvpn-stable-release/protonvpn-stable-release-1.0.1-2.noarch.rpm"
+sudo dnf install ./protonvpn-stable-release-1.0.1-2.noarch.rpm
+cd ..
+
+wget https://www.torproject.org/dist/torbrowser/13.5.1/tor-browser-linux-x86_64-13.5.1.tar.xz
+tar -xf tor-browser-linux-x86_64-13.5.1.tar.xz
+rm tor-browser-linux-x86_64-13.5.1.tar.xz && cd tor-browser 
+chmod +x start-tor-browser.desktop
+./start-tor-browser.desktop --register-app
+
+curl -f https://zed.dev/install.sh | sh
+
+sudo dnf install -y 'dnf-command(config-manager)'
+sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+sudo dnf install -y gh --repo gh-cli
+
+EXTENSIONS
+appindicator
+blurshell
+caffeine
+clipboard
+dash2dock
+hide top
+tiling assistant
+
+
+
+
+
