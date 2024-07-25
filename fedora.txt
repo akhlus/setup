@@ -31,6 +31,7 @@ tar -xf tor-browser-linux-x86_64-13.5.1.tar.xz
 rm tor-browser-linux-x86_64-13.5.1.tar.xz && cd tor-browser 
 chmod +x start-tor-browser.desktop
 ./start-tor-browser.desktop --register-app
+cd ..
 
 curl -f https://zed.dev/install.sh | sh
 
