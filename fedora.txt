@@ -1,21 +1,25 @@
 flatpak install flathub com.discordapp.Discord
-flatpak install flathub com.usebottles.bottles
-flatpak install flathub com.github.tchx84.Flatseal
-flatpak install flathub com.mattjakeman.ExtensionManager
-flatpak install flathub com.obsproject.Studio
-flatpak install flathub org.onlyoffice.desktopeditors
-flatpak install flathub org.mozilla.Thunderbird
-flatpak install flathub com.vscodium.codium
-flatpak install flathub com.github.xournalpp.xournalpp
-flatpak install flathub org.kicad.KiCad
-flatpak install flathub org.chromium.Chromium
+flatpak install -y flathub com.github.tchx84.Flatseal
+flatpak install -y flathub com.mattjakeman.ExtensionManager
+flatpak install -y flathub com.obsproject.Studio
+flatpak install -y flathub org.onlyoffice.desktopeditors
+flatpak install -y flathub org.mozilla.Thunderbird
+flatpak install -y flathub com.vscodium.codium
+flatpak install -y flathub com.github.xournalpp.xournalpp
+flatpak install -y flathub org.kicad.KiCad
+flatpak install -y flathub org.chromium.Chromium
+flatpak install -y flathub com.spotify.Client
+
+flatpak install -y flathub com.usebottles.bottles
+flatpak install -y flathub com.valvesoftware.Steam
+flatpak install -y flathub com.heroicgmaeslauncher.hgl
+flatpak install -y flathub io.github.aandrew_me.ytdn
 
 sudo dnf install -y htop
 sudo dnf install -y vlc
 sudo dnf install -y gnome-tweaks
 sudo dnf install -y wireguard-tools
 sudo dnf install -y pipx
-sudo dnf install -y
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -24,6 +28,8 @@ sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh |
 mkdir rpm && cd rpm
 wget "https://repo.protonvpn.com/fedora-$(cat /etc/fedora-release | cut -d\  -f 3)-stable/protonvpn-stable-release/protonvpn-stable-release-1.0.1-2.noarch.rpm"
 sudo dnf install ./protonvpn-stable-release-1.0.1-2.noarch.rpm
+https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm
+sudo dnf install ./appimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm
 cd ..
 
 wget https://www.torproject.org/dist/torbrowser/13.5.1/tor-browser-linux-x86_64-13.5.1.tar.xz
