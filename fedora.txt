@@ -23,9 +23,10 @@ sudo dnf install -y pipx
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | 
+sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
 
-mkdir rpm && cd rpm
+mkdir rpm
+cd rpm
 wget "https://repo.protonvpn.com/fedora-$(cat /etc/fedora-release | cut -d\  -f 3)-stable/protonvpn-stable-release/protonvpn-stable-release-1.0.1-2.noarch.rpm"
 sudo dnf install -y ./protonvpn-stable-release-1.0.1-2.noarch.rpm
 wget https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm
@@ -35,7 +36,8 @@ rm -r rpm
 
 wget https://www.torproject.org/dist/torbrowser/13.5.1/tor-browser-linux-x86_64-13.5.1.tar.xz
 tar -xf tor-browser-linux-x86_64-13.5.1.tar.xz
-rm tor-browser-linux-x86_64-13.5.1.tar.xz && cd tor-browser 
+rm tor-browser-linux-x86_64-13.5.1.tar.xz
+cd tor-browser 
 chmod +x start-tor-browser.desktop
 ./start-tor-browser.desktop --register-app
 cd ..
