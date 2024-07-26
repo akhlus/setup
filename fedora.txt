@@ -31,6 +31,7 @@ sudo dnf install -y ./protonvpn-stable-release-1.0.1-2.noarch.rpm
 wget https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm
 sudo dnf install -y ./appimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm
 cd ..
+rm -r rpm
 
 wget https://www.torproject.org/dist/torbrowser/13.5.1/tor-browser-linux-x86_64-13.5.1.tar.xz
 tar -xf tor-browser-linux-x86_64-13.5.1.tar.xz
