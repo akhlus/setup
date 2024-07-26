@@ -27,9 +27,9 @@ sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh |
 
 mkdir rpm && cd rpm
 wget "https://repo.protonvpn.com/fedora-$(cat /etc/fedora-release | cut -d\  -f 3)-stable/protonvpn-stable-release/protonvpn-stable-release-1.0.1-2.noarch.rpm"
-sudo dnf install ./protonvpn-stable-release-1.0.1-2.noarch.rpm
+sudo dnf install -y ./protonvpn-stable-release-1.0.1-2.noarch.rpm
 https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm
-sudo dnf install ./appimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm
+sudo dnf install -y ./appimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm
 cd ..
 
 wget https://www.torproject.org/dist/torbrowser/13.5.1/tor-browser-linux-x86_64-13.5.1.tar.xz
