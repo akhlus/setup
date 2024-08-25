@@ -9,7 +9,7 @@ flatpak install -y flathub com.github.xournalpp.xournalpp
 flatpak install -y flathub org.kicad.KiCad
 flatpak install -y flathub org.chromium.Chromium
 flatpak install -y flathub com.spotify.Client
-flatpak install flathub com.google.Chrome
+flatpak install -y flathub com.google.Chrome
 
 flatpak install -y flathub com.usebottles.bottles
 flatpak install -y flathub com.valvesoftware.Steam
