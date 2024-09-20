@@ -13,7 +13,7 @@ flatpak install -y flathub com.google.Chrome
 
 flatpak install -y flathub com.usebottles.bottles
 flatpak install -y flathub com.valvesoftware.Steam
-flatpak install -y flathub com.heroicgmaeslauncher.hgl
+flatpak install -y flathub com.heroicgameslauncher.hgl
 flatpak install -y flathub io.github.aandrew_me.ytdn
 
 sudo dnf install -y htop
