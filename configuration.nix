@@ -3,7 +3,9 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
-
+let
+  unstable = import <nixos-unstable> {};
+in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -13,6 +15,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "s340"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -50,9 +53,9 @@
   services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "gb";
-    xkbVariant = "";
+    variant = "";
   };
 
   # Configure console keymap
@@ -62,7 +65,6 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -101,44 +103,55 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+  #cli tools
   wget
   git
   python3
   cargo
   pipx 
   speedtest-cli
-  gnome-extension-manager
-  vscodium
-  xournalpp
-  spotify
-  kicad
-  gh
   htop
-  google-chrome
-  protonvpn-gui
-  kicad
-  brave
-  neofetch
-  wireguard-tools
-  gnomeExtensions.dash-to-dock
-  gnomeExtensions.caffeine
-  gnomeExtensions.blur-my-shell
-  rustup
-  ungoogled-chromium
-  gparted
+  gh
   usbutils
   toybox
   tio
-  
+  neofetch
+  wireguard-tools
+  tldr
+  rustup
+  #apps
+  gnome-extension-manager 
+  #vscodium
+  xournalpp
+  spotify
+  kicad
+  google-chrome
+  protonvpn-gui
+  kicad
+  gnomeExtensions.caffeine
+  gnomeExtensions.blur-my-shell
+  ungoogled-chromium
+  gparted
+  unstable.zed-editor
+  vscode
+  calibre
+  onlyoffice-bin_latest
+  vlc
+  #hyprland
+  gnome.gnome-tweaks
+  #typefaces
+  inter
+  source-code-pro
+  fira
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
+  # programs.gnupg.agent = {
+  #   enable = true;
+  #   enableSSHSupport = true;
+  # };
 
   # List services that you want to enable:
 
@@ -157,6 +170,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.11"; # Did you read the comment?
+  system.stateVersion = "24.05"; # Did you read the comment?
 
 }
