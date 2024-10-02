@@ -107,38 +107,45 @@ in
   wget
   git
   python3
-  cargo
-  pipx 
-  speedtest-cli
-  htop
-  gh
-  usbutils
-  toybox
-  tio
   neofetch
   wireguard-tools
   tldr
+  speedtest-cli
+  gh
+  htop
+
+  pipx 
   rustup
+  cargo
+  libgccjit
+  nodejs_22
+
+
+  usbutils
+  toybox
+  tio
+
   #apps
   gnome-extension-manager 
-  #vscodium
   xournalpp
   spotify
-  kicad
   google-chrome
   protonvpn-gui
   kicad
-  gnomeExtensions.caffeine
-  gnomeExtensions.blur-my-shell
-  ungoogled-chromium
+  chromium
   gparted
   unstable.zed-editor
   vscode
   calibre
   onlyoffice-bin_latest
   vlc
-  #hyprland
   gnome.gnome-tweaks
+
+  #extensions
+  gnomeExtensions.caffeine
+  gnomeExtensions.blur-my-shell
+  gnomeExtensions.dash-to-panel
+  
   #typefaces
   inter
   source-code-pro
